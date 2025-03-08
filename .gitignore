@@ -1,0 +1,4 @@
+#Folders
+fastapi/__pycache__/
+fastapi/.venv/
+db1/Config/
