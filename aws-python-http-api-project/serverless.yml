@@ -1,14 +1,24 @@
 service: aws-python-http-api-project
 frameworkVersion: '3'
 
+plugins:
+  - serverless-offline
+
 provider:
   name: aws
   runtime: python3.9
 
 functions:
-  hello:
-    handler: handler.hello
+  five_atributte:
+    handler: handler.five_atributte
     events:
-      - httpApi:
-          path: /
+      - http:
+          path: /five_atributte
           method: get
+  ten_atributte:
+    handler: handler.ten_atributte
+    events:
+      - http:
+          path: /ten_atributte
+          method: get
+

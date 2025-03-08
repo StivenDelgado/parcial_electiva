@@ -2,3 +2,9 @@
 fastapi/__pycache__/
 fastapi/.venv/
 db1/Config/
+
+aws-python-http-api-project/__pycache__/
+aws-python-http-api-project/.venv/
+aws-python-http-api-project/node_modules/
+
+db2/Config/
