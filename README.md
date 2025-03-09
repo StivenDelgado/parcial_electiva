@@ -15,66 +15,62 @@ Este proyecto está estructurado en varias carpetas, cada una con un propósito 
 1. Navega a la carpeta `fastapi`:
    ```bash
    cd fastapi
-Instala las dependencias:
+2. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
 
-bash
-Copy
-pip install -r requirements.txt
-Inicia la aplicación con Uvicorn:
+3. Inicia la aplicación con Uvicorn:
+   ```bash
+   uvicorn main:app --reload
+La aplicación estará disponible en `http://127.0.0.1:8000`.
 
-bash
-Copy
-uvicorn main:app --reload
-La aplicación estará disponible en http://127.0.0.1:8000.
+### Serverless
 
-Serverless
-Navega a la carpeta raíz del proyecto (donde está serverless.yml):
+1. Navega a la carpeta raíz del proyecto (donde está serverless.yml):
+   ```bash
+   cd aws-python-http-api-project
+   
+2. Instala las dependencias de Node.js:
+   ```bash
+   npm install
+   
+3. Inicia Serverless Offline para probar localmente:
+   ```bash
+   serverless offline --stage dev --reloadHandler
+   
+La API estará disponible en `http://localhost:3000`.
 
-bash
-Copy
-cd aws-python-http-api-project
-Instala las dependencias de Node.js:
+### Bases de Datos (MySQL con Docker)
+## Base de Datos 1 (db1)
+1. Navega a la carpeta db1:
+   ```bash
+   cd db1
+   
+2. Construir las imágenes de Docker:
+   ```bash
+   docker compose build --no-cache
+   
+3. Inicia el contenedor de Docker:
+   ```bash
+   docker compose up -d
+   
+Mysql estará disponible en `localhost:4600`.
+El gestor estará disponible en `localhost:8001`
 
-bash
-Copy
-npm install
-Inicia Serverless Offline para probar localmente:
-
-bash
-Copy
-serverless offline --stage dev --reloadHandler
-La API estará disponible en http://localhost:3000.
-
-Bases de Datos (MySQL con Docker)
-Base de Datos 1 (db1)
-Navega a la carpeta db1:
-
-bash
-Copy
-cd db1
-Inicia el contenedor de Docker:
-
-bash
-Copy
-docker-compose up -d
-La base de datos estará disponible en localhost:3306.
-
-Base de Datos 2 (db2)
-Navega a la carpeta db2:
-
-bash
-Copy
-cd db2
-Inicia el contenedor de Docker:
-
-bash
-Copy
-docker-compose up -d
-La base de datos estará disponible en localhost:3307.
-
-Configuración Adicional
-.gitignore: Archivo para ignorar archivos y carpetas en el control de versiones.
-
-handler.py: Contiene la lógica de las funciones Lambda.
+## Base de Datos 2 (db2)
+1. Navega a la carpeta db2:
+   ```bash
+   cd db2
+   
+2. Construir las imágenes de Docker:
+   ```bash
+   docker compose build --no-cache
+   
+3. Inicia el contenedor de Docker:
+   ```bash
+   docker compose up -d
+   
+Mysql estará disponible en `localhost:4800`.
+El gestor estará disponible en `localhost:9001`
 
 README.md: Este archivo, con instrucciones para el proyecto.
