@@ -1,76 +1,69 @@
-# AWS Python HTTP API Project
+# PARCIAL
+This project is structured into several folders, each with a specific purpose. Below is an explanation of how to start each part of the project.
 
-Este proyecto está estructurado en varias carpetas, cada una con un propósito específico. A continuación, se explica cómo iniciar cada parte del proyecto.
+## Project Structure
+- **`fastapi`**: Contains the FastAPI application.
 
-## Estructura del Proyecto
+- **`serverless`**: Contains the configuration to deploy the application using the Serverless Framework.
 
-- **`fastapi`**: Contiene la aplicación FastAPI.
-- **`serverless`**: Contiene la configuración para desplegar la aplicación usando Serverless Framework.
-- **`db1`** y **`db2`**: Contienen configuraciones de bases de datos MySQL con Docker.
+- **`db1`** y **`db2`**: Contain MySQL database configurations with Docker.
 
-## Iniciar el Proyecto
-
+## Starting the Project
 ### FastAPI
-
-1. Navega a la carpeta `fastapi`:
+1. Navigate to the `fastapi` folder:
    ```bash
    cd fastapi
-2. Instala las dependencias:
+2. Install the dependencies:
    ```bash
    pip install -r requirements.txt
-
-3. Inicia la aplicación con Uvicorn:
+3. Start the application with Uvicorn:
    ```bash
    uvicorn main:app --reload
-La aplicación estará disponible en `http://127.0.0.1:8000`.
+The application will be available at `http://127.0.0.1:8000`.
 
 ### Serverless
-
-1. Navega a la carpeta raíz del proyecto (donde está serverless.yml):
+1. Navigate to the project root folder (where serverless.yml is located):
    ```bash
    cd aws-python-http-api-project
-   
-2. Instala las dependencias de Node.js:
+2. Install Node.js dependencies:
    ```bash
    npm install
-   
-3. Inicia Serverless Offline para probar localmente:
+3. Start Serverless Offline to test locally:
    ```bash
    serverless offline --stage dev --reloadHandler
-   
-La API estará disponible en `http://localhost:3000`.
+The API will be available at `http://localhost:3000`.
 
-### Bases de Datos (MySQL con Docker)
-## Base de Datos 1 (db1)
-1. Navega a la carpeta db1:
+## Databases (MySQL with Docker)
+### Database 1 (db1)
+1. Navigate to the db1 folder:
    ```bash
    cd db1
    
-2. Construir las imágenes de Docker:
+2. Build the Docker images:
    ```bash
    docker compose build --no-cache
-   
-3. Inicia el contenedor de Docker:
+
+3. Start the Docker container:
    ```bash
    docker compose up -d
    
-Mysql estará disponible en `localhost:4600`.
-El gestor estará disponible en `localhost:8001`
+MySQL will be available at `localhost:4600`.
+The management interface will be available at `localhost:8001`.
 
-## Base de Datos 2 (db2)
-1. Navega a la carpeta db2:
+### Database 2 (db2)
+1. Navigate to the db2 folder:
    ```bash
    cd db2
    
-2. Construir las imágenes de Docker:
+2. Build the Docker images:
    ```bash
    docker compose build --no-cache
-   
-3. Inicia el contenedor de Docker:
+
+3. Start the Docker container:
    ```bash
    docker compose up -d
    
-Mysql estará disponible en `localhost:4800`.
-El gestor estará disponible en `localhost:9001`
+MySQL will be available at `localhost:4800`.
+The management interface will be available at `localhost:9001`.
 
-README.md: Este archivo, con instrucciones para el proyecto.
+README.md: This file, with instructions for the project.
